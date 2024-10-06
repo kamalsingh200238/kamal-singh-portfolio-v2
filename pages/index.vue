@@ -3,6 +3,7 @@ import Navbar from "~/components/Navbar.vue";
 import MainSection from "~/components/MainSection.vue";
 import AboutSection from "~/components/AboutSection.vue";
 import ExperienceSection from "~/components/ExperienceSection.vue";
+import ProjectSection from "~/components/ProjectSection.vue";
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import ExperienceSection from "~/components/ExperienceSection.vue";
     <MainSection />
     <AboutSection />
     <ExperienceSection />
+    <ProjectSection />
   </div>
 </template>
