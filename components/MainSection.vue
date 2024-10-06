@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { Button } from "~/components/ui/button";
@@ -7,7 +11,7 @@ import { Button } from "~/components/ui/button";
 
 <template>
   <section
-    class="py-16 px-8 md:py-24 md:px-12 lg:py-32 lg:px-16 text-slate-300"
+    class="py-16 px-8 md:py-24 md:px-12 lg:py-32 lg:px-16 text-slate-300 mt-2 lg:mt-2"
   >
     <div class="flex justify-center items-center">
       <div class="max-w-3xl text-center">
@@ -17,7 +21,7 @@ import { Button } from "~/components/ui/button";
         </h1>
 
         <p
-          class="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl text-slate-500"
+          class="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl text-slate-400"
         >
           I build things for the web
         </p>
@@ -34,30 +38,53 @@ import { Button } from "~/components/ui/button";
           class="flex flex-col gap-6 justify-center mb-12 md:flex-row md:gap-8"
         >
           <Button as="a" variant="outline" href="#about">Learn More</Button>
-          <Button as="a" variant="outline" href="/resume.pdf" pill
+          <Button
+            as="a"
+            href="/kamal-resume.pdf"
+            download="kamal-singh-resume.pdf"
             >Resume</Button
           >
         </nav>
 
         <ul class="flex gap-10 justify-center">
           <li>
-            <Button as="a" variant="outline" size="icon">
-              <FontAwesomeIcon :icon="faGithub" />
+            <Button
+              as="a"
+              variant="icon"
+              size="icon"
+              href="https://github.com/kamalsingh200238"
+            >
+              <FontAwesomeIcon :icon="faGithub" size="2xl" />
             </Button>
           </li>
           <li>
-            <Button as="a" variant="outline" size="icon">
-              <FontAwesomeIcon :icon="faXTwitter" />
+            <Button
+              as="a"
+              variant="icon"
+              size="icon"
+              href="https://twitter.com/Kamalsingh1605"
+            >
+              <FontAwesomeIcon :icon="faXTwitter" size="2xl" />
             </Button>
           </li>
           <li>
-            <Button as="a" variant="outline" size="icon">
-              <FontAwesomeIcon :icon="faEnvelope" />
+            <Button
+              as="a"
+              variant="icon"
+              size="icon"
+              href="mailto:kamalsingh200238@gmail.com"
+            >
+              <FontAwesomeIcon :icon="faEnvelope" size="2xl" />
             </Button>
           </li>
           <li>
-            <Button as="a" variant="outline" size="icon">
-              <FontAwesomeIcon :icon="faLinkedin" />
+            <Button
+              as="a"
+              variant="icon"
+              size="icon"
+              href="https://www.linkedin.com/in/kamal--singh/"
+            >
+              <FontAwesomeIcon :icon="faLinkedin" size="2xl" />
             </Button>
           </li>
         </ul>
