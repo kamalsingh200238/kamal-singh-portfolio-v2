@@ -1,15 +1,19 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Button } from "@/components/ui/button";
+import { Button } from "~/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import MainLogo from "~/components/MainLogo.vue";
 import { Menu } from "lucide-vue-next";
+import { useWindowScroll } from "@vueuse/core";
+import { cn } from "~/lib/utils/cn";
 
 const isOpen = ref(false);
+const { y } = useWindowScroll();
 
 const closeMenu = () => {
   isOpen.value = false;
@@ -31,13 +35,16 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50">
-    <div class="container flex h-16 items-center justify-between">
-      <Button
-        variant="outline"
-        size="icon"
-        class="hover:bg-transparent border-transparent hover:text-teal-500 text-teal-300"
-      >
+  <header class="fixed top-0 left-0 right-0 z-50 bg-background">
+    <div
+      :class="
+        cn({
+          'container flex items-center justify-between transition-all h-16 lg:h-20': true,
+          'shadow-xl h-16': y !== 0,
+        })
+      "
+    >
+      <Button variant="icon" size="icon" class="w-10 h-12 lg:w-12 lg:h-12">
         <MainLogo />
       </Button>
       <nav class="hidden md:flex space-x-4">
@@ -48,11 +55,7 @@ onUnmounted(() => {
             </Button>
           </li>
           <li>
-            <Button
-              as="a"
-              href="/path/to/resume.pdf"
-              target="_blank"
-            >
+            <Button as="a" href="/path/to/resume.pdf" target="_blank">
               Resume
             </Button>
           </li>
