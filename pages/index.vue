@@ -1,6 +1,7 @@
-<script lang="ts"></script>
+<script setup lang="ts">
+import Navbar from "~/components/Navbar.vue";
+</script>
 
 <template>
-  <Button>Click</Button>
-  Home page
+  <Navbar />
 </template>
