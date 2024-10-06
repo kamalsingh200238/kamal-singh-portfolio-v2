@@ -1,3 +1,3 @@
 <template>
-  Hihi
+  Home page
 </template>
