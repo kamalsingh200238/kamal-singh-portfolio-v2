@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300"
+    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300 scroll-m-16"
   >
     <div class="mx-auto max-w-5xl">
       <h2
