@@ -4,6 +4,7 @@ import MainSection from "~/components/MainSection.vue";
 import AboutSection from "~/components/AboutSection.vue";
 import ExperienceSection from "~/components/ExperienceSection.vue";
 import ProjectSection from "~/components/ProjectSection.vue";
+import ContactSection from "~/components/ContactSection.vue";
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import ProjectSection from "~/components/ProjectSection.vue";
     <AboutSection />
     <ExperienceSection />
     <ProjectSection />
+    <ContactSection />
   </div>
 </template>
