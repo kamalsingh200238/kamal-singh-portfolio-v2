@@ -44,9 +44,11 @@ onUnmounted(() => {
         })
       "
     >
-      <Button variant="icon" size="icon" class="w-10 h-12 lg:w-12 lg:h-12">
+      <Button as="a" href="/" variant="icon" size="icon" class="w-10 h-12 lg:w-12 lg:h-12">
         <MainLogo />
       </Button>
+
+      <!-- desktop nav -->
       <nav class="hidden md:flex space-x-4">
         <ul class="flex items-center gap-4">
           <li v-for="item in navItems" :key="item.name">
@@ -55,12 +57,14 @@ onUnmounted(() => {
             </Button>
           </li>
           <li>
-            <Button as="a" href="/path/to/resume.pdf" target="_blank">
+            <Button as="a" href="/kamal-resume.pdf" download="kamal-singh-resume.pdf">
               Resume
             </Button>
           </li>
         </ul>
       </nav>
+
+      <!-- mobile nav -->
       <Sheet v-model:open="isOpen">
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" class="md:hidden">
@@ -83,8 +87,8 @@ onUnmounted(() => {
             </Button>
             <Button
               as="a"
-              href="/path/to/resume.pdf"
-              target="_blank"
+              href="/kamal-resume.pdf"
+              download="kamal-singh-resume.pdf"
               @click="closeMenu"
             >
               Resume
