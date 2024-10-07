@@ -8,12 +8,16 @@ import ContactSection from "~/components/ContactSection.vue";
 </script>
 
 <template>
-  <div>
+  <main>
     <Navbar />
     <MainSection />
     <AboutSection />
     <ExperienceSection />
     <ProjectSection />
     <ContactSection />
-  </div>
+  </main>
+  <footer class="text-xs text-foreground text-center mt-6">
+    <p>Designed inspired for Brittany Chiangs's portfolio</p>
+    <p>Made by Kamal Singh</p>
+  </footer>
 </template>
