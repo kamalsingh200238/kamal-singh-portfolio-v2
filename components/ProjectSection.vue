@@ -80,7 +80,7 @@ import { projects } from "~/data/projects.js";
             <div class="flex gap-2 items-center">
               <TooltipProvider>
                 <Tooltip>
-                  <TooltipTrigger>
+                  <TooltipTrigger as-child>
                     <Button
                       variant="icon"
                       size="icon"
@@ -101,7 +101,7 @@ import { projects } from "~/data/projects.js";
 
               <TooltipProvider>
                 <Tooltip>
-                  <TooltipTrigger>
+                  <TooltipTrigger as-child>
                     <Button
                       variant="icon"
                       size="icon"
