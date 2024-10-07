@@ -36,10 +36,12 @@ onUnmounted(() => {
 
 <template>
   <header
-    :class="{
-      'fixed top-0 left-0 right-0 z-50 bg-background transition-all py-3 lg:py-4': true,
-      'py-3 lg:py-3 shadow-lg': y !== 0,
-    }"
+    :class="
+      cn({
+        'fixed top-0 left-0 right-0 z-50 bg-background transition-all py-3 lg:py-4': true,
+        'py-3 lg:py-3 shadow-lg': y !== 0,
+      })
+    "
   >
     <div class="container flex items-center justify-between">
       <Button
