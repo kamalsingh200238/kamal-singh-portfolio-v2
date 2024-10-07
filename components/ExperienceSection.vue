@@ -42,7 +42,7 @@ import { experiences } from "~/data/experiences";
             </p>
           </div>
           <div>
-            <ul class="pl-4 space-y-4 list-disc">
+            <ul class="pl-6 space-y-4 list-disc">
               <li
                 v-for="responsibility in exp.responsibilities"
                 :key="responsibility"
