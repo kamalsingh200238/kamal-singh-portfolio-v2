@@ -35,16 +35,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-background">
-    <div
-      :class="
-        cn({
-          'container flex items-center justify-between transition-all h-16 lg:h-20': true,
-          'shadow-xl h-16': y !== 0,
-        })
-      "
-    >
-      <Button as="a" href="/" variant="icon" size="icon" class="w-10 h-12 lg:w-12 lg:h-12">
+  <header
+    :class="{
+      'fixed top-0 left-0 right-0 z-50 bg-background transition-all py-3 lg:py-4': true,
+      'py-3 lg:py-3 shadow-lg': y !== 0,
+    }"
+  >
+    <div class="container flex items-center justify-between">
+      <Button
+        as="a"
+        href="/"
+        variant="icon"
+        size="icon"
+        class="w-10 h-12 lg:w-12 lg:h-12"
+      >
         <MainLogo />
       </Button>
 
@@ -57,7 +61,11 @@ onUnmounted(() => {
             </Button>
           </li>
           <li>
-            <Button as="a" href="/kamal-resume.pdf" download="kamal-singh-resume.pdf">
+            <Button
+              as="a"
+              href="/kamal-resume.pdf"
+              download="kamal-singh-resume.pdf"
+            >
               Resume
             </Button>
           </li>
