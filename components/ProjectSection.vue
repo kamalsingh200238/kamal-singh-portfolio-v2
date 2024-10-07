@@ -6,15 +6,20 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "~/components/ui/carousel";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "~/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-vue-next";
 import { projects } from "~/data/projects.js";
 </script>
 
 <template>
   <section
     id="projects"
-    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300"
+    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300 scroll-m-16"
   >
     <div class="mx-auto max-w-7xl">
       <h2
@@ -29,8 +34,8 @@ import { projects } from "~/data/projects.js";
           :key="index"
           class="flex flex-col gap-4 justify-between items-center lg:flex-row lg:gap-12"
         >
-          <div class="w-full lg:w-1/2">
-            <Carousel class="w-full">
+          <div class="w-full lg:w-1/2 px-12">
+            <Carousel>
               <CarouselContent>
                 <CarouselItem
                   v-for="(image, imageIndex) in project.images"
@@ -39,7 +44,7 @@ import { projects } from "~/data/projects.js";
                   <img
                     :src="image.src"
                     :alt="image.alt"
-                    class="object-contain w-full h-auto rounded-lg"
+                    class="object-contain rounded-lg"
                   />
                 </CarouselItem>
               </CarouselContent>
@@ -48,12 +53,14 @@ import { projects } from "~/data/projects.js";
             </Carousel>
           </div>
           <div class="w-full lg:w-1/2">
-            <h3 class="mb-2 text-lg font-bold lg:text-xl">
+            <h3 class="mb-2 text-lg font-bold lg:text-xl text-teal-300">
               {{ project.title }}
             </h3>
             <p class="mb-4">{{ project.description }}</p>
-            <h4 class="mb-2 text-base font-semibold">Features:</h4>
-            <ul class="pl-4 mb-4 space-y-2 list-disc">
+            <h4 class="mb-2 text-base font-semibold text-teal-300">
+              Features:
+            </h4>
+            <ul class="pl-6 mb-4 space-y-2 list-disc">
               <li
                 v-for="(feature, featureIndex) in project.features"
                 :key="featureIndex"
@@ -65,29 +72,55 @@ import { projects } from "~/data/projects.js";
               <span
                 v-for="(tag, tagIndex) in project.tags"
                 :key="tagIndex"
-                class="px-2 py-1 text-sm bg-teal-900 text-teal-300 rounded"
+                class="px-2 py-1 text-sm bg-teal-800/40 text-teal-200 rounded"
               >
                 {{ tag }}
               </span>
             </div>
             <div class="flex gap-2 items-center">
-              <Button
-                variant="ghost"
-                size="icon"
-                :href="project.githubLink"
-                target="_blank"
-              >
-                <Github class="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                :href="project.liveLink"
-                target="_blank"
-                :disabled="!project.hasLiveLink"
-              >
-                <ExternalLink class="h-4 w-4" />
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Button
+                      variant="icon"
+                      size="icon"
+                      :href="project.githubLink"
+                      target="_blank"
+                    >
+                      <font-awesome-icon
+                        class="text-xl"
+                        icon="fa-brands fa-github"
+                      />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Github respository link</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Button
+                      variant="icon"
+                      size="icon"
+                      :href="project.liveLink"
+                      target="_blank"
+                      :disabled="!project.hasLiveLink"
+                    >
+                      <font-awesome-icon
+                        class="text-lg"
+                        icon="fa-solid fa-arrow-up-right-from-square"
+                      />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p v-if="project.hasLiveLink">Live link for the application</p>
+                    <p v-else="project.hasLiveLink">No live link available for this project</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
         </div>
