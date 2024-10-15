@@ -6,8 +6,9 @@ import ExperienceSection from "~/components/ExperienceSection.vue";
 import ProjectSection from "~/components/ProjectSection.vue";
 import ContactSection from "~/components/ContactSection.vue";
 useHead({
-  title: "Kamal Singh"
-})
+  title: "Kamal Singh",
+  link: [{ rel: "icon", type: "image/svg+xml", href: "/main-logo.svg" }],
+});
 </script>
 
 <template>
