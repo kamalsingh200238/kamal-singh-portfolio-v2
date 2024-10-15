@@ -104,22 +104,26 @@ import { projects } from "~/data/projects.js";
                 <Tooltip>
                   <TooltipTrigger as-child>
                     <Button
-                      as="a"
+                      as-child
                       variant="icon"
                       size="icon"
-                      :href="project.liveLink"
-                      target="_blank"
                       :disabled="!project.hasLiveLink"
                     >
-                      <font-awesome-icon
-                        class="text-lg"
-                        icon="fa-solid fa-arrow-up-right-from-square"
-                      />
+                      <a :href="project.liveLink" target="_blank">
+                        <font-awesome-icon
+                          class="text-lg"
+                          icon="fa-solid fa-arrow-up-right-from-square"
+                        />
+                      </a>
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p v-if="project.hasLiveLink">Live link for the application</p>
-                    <p v-else="project.hasLiveLink">No live link available for this project</p>
+                    <p v-if="project.hasLiveLink">
+                      Live link for the application
+                    </p>
+                    <p v-else="project.hasLiveLink">
+                      No live link available for this project
+                    </p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
