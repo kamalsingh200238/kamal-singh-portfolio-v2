@@ -44,7 +44,7 @@ import { projects } from "~/data/projects.js";
                   <img
                     :src="image.src"
                     :alt="image.alt"
-                    class="object-contain rounded-lg w-full aspect-video border border-teal-300"
+                    class="object-contain rounded-lg w-full aspect-video border border-teal-800"
                   />
                 </CarouselItem>
               </CarouselContent>
