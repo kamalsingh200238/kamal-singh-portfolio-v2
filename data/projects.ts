@@ -4,26 +4,39 @@ export const projects = [
     description:
       "A platform for managing student societies, offering role-based dashboards, real-time enrollments, and email notifications.",
     features: [
-      "Role-based access for admins, members, and students.",
+      "Role-based dynamic dashboards for admins, members, and students.",
       "Real-time society enrollment system.",
-      "Password reset with email verification.",
-      "Full CRUD operations for societies and roles.",
+      "Authorization and authentication with email verification.",
+      "Password reset with email functionality.",
+      "Full CRUD operations for societies, roles, and users.",
       "Dashboard for activity logs and user management.",
     ],
-    tags: ["Laravel", "PHP", "SQLite", "Tailwind CSS"],
+    tags: ["Laravel", "HTMX", "Tailwind CSS", "Web Components"],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Socio Manage Dashboard",
+        src: "/socio-manage/home-page.png",
+        alt: "Socio manage homepage",
       },
       {
-        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Socio Manage Enrollment",
+        src: "/socio-manage/dashboard.png",
+        alt: "Socio manage dashboard",
+      },
+      {
+        src: "/socio-manage/reset-password.png",
+        alt: "Socio manage reset password",
+      },
+      {
+        src: "/socio-manage/log-in.png",
+        alt: "Socio manage log in page",
+      },
+      {
+        src: "/socio-manage/sign-up.png",
+        alt: "Socio manage sign up",
       },
     ],
-    githubLink: "#",
-    liveLink: "#",
-    hasLiveLink: true,
+    githubLink: "https://github.com/kamalsingh200238/socioManage",
+    liveLink: "",
+    hasLiveLink: false,
   },
   {
     title: "Novel Scraper Bot",
@@ -32,29 +45,31 @@ export const projects = [
     features: [
       "Bypasses Cloudflare protections.",
       "Converts web novels to EPUB format.",
-      "Supports multiple novel sources.",
-      "Simple command-line interface.",
+      "Supports parallel scraping if allowed.",
       "Fast and efficient scraping capabilities.",
     ],
     tags: ["Python", "Golang", "Botasaurus", "Regex"],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Novel Scraper Bot",
+        src: "/novel-scrapper/bypass-cloudflare.png",
+        alt: "Novel Scraper Bot bypassing cloudflare",
       },
       {
-        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt: "Reading Epub",
+        src: "/novel-scrapper/after-bypass.png",
+        alt: "Novel Scraper Bot after bypass",
+      },
+      {
+        src: "/novel-scrapper/cli-capture.png",
+        alt: "Novel Scraper Bot cli screenshot",
       },
     ],
-    githubLink: "#",
-    liveLink: "#",
+    githubLink: "https://github.com/kamalsingh200238/novel-scrapper",
+    liveLink: "",
     hasLiveLink: false,
   },
   {
     title: "Worldwise",
-    description:
-      "A Country API app that displays country data fetched from a REST API.",
+    description: "A app that displays country data fetched from a REST API.",
     features: [
       "Search countries from the search field.",
       "Filter countries by location.",
@@ -91,8 +106,8 @@ export const projects = [
         alt: "Worldwise Mobile Light Mode",
       },
     ],
-    githubLink: "#",
-    liveLink: "#",
-    hasLiveLink: false,
+    githubLink: "https://github.com/kamalsingh200238/country-api-v2",
+    liveLink: "https://country-api-v2.vercel.app/",
+    hasLiveLink: true,
   },
-]
+];
