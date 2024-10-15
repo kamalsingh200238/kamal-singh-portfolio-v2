@@ -5,6 +5,9 @@ import AboutSection from "~/components/AboutSection.vue";
 import ExperienceSection from "~/components/ExperienceSection.vue";
 import ProjectSection from "~/components/ProjectSection.vue";
 import ContactSection from "~/components/ContactSection.vue";
+useHead({
+  title: "Kamal Singh"
+})
 </script>
 
 <template>
