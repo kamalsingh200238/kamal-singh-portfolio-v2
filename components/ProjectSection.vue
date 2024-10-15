@@ -44,7 +44,7 @@ import { projects } from "~/data/projects.js";
                   <img
                     :src="image.src"
                     :alt="image.alt"
-                    class="object-contain rounded-lg"
+                    class="object-contain rounded-lg w-full aspect-video border border-teal-300"
                   />
                 </CarouselItem>
               </CarouselContent>
@@ -82,6 +82,7 @@ import { projects } from "~/data/projects.js";
                 <Tooltip>
                   <TooltipTrigger as-child>
                     <Button
+                      as="a"
                       variant="icon"
                       size="icon"
                       :href="project.githubLink"
@@ -103,6 +104,7 @@ import { projects } from "~/data/projects.js";
                 <Tooltip>
                   <TooltipTrigger as-child>
                     <Button
+                      as="a"
                       variant="icon"
                       size="icon"
                       :href="project.liveLink"
