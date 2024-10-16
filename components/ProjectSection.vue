@@ -104,17 +104,17 @@ import { projects } from "~/data/projects.js";
                 <Tooltip>
                   <TooltipTrigger as-child>
                     <Button
-                      as-child
+                      :as="project.hasLiveLink ? 'a' : 'button'"
                       variant="icon"
                       size="icon"
                       :disabled="!project.hasLiveLink"
+                      :href="project.liveLink"
+                      target="_blank"
                     >
-                      <a :href="project.liveLink" target="_blank">
-                        <font-awesome-icon
-                          class="text-lg"
-                          icon="fa-solid fa-arrow-up-right-from-square"
-                        />
-                      </a>
+                      <font-awesome-icon
+                        class="text-lg"
+                        icon="fa-solid fa-arrow-up-right-from-square"
+                      />
                     </Button>
                   </TooltipTrigger>
                   <TooltipContent>
