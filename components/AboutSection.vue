@@ -12,14 +12,13 @@
 
       <div class="flex flex-col gap-12 lg:flex-row">
         <!-- Image container -->
-        <!-- TODO: ADD IMAGE -->
         <div class="w-full lg:order-2 lg:w-1/2">
           <div
             class="relative mx-auto h-52 lg:h-56 group isolate aspect-square"
           >
             <img
               alt="Kamal Image"
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/kamal-image.jpg"
               class="object-cover w-full h-full rounded-md transition-all mix-blend-multiply aspect-square group-hover:mix-blend-normal"
             />
             <div
