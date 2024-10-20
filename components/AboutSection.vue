@@ -18,7 +18,7 @@
           >
             <img
               alt="Kamal Image"
-              src="/kamal-image.jpg"
+              src="/kamal-image.webp"
               class="object-cover w-full h-full rounded-md transition-all mix-blend-multiply aspect-square group-hover:mix-blend-normal"
             />
             <div
