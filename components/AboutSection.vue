@@ -7,7 +7,7 @@
       <h2
         class="flex justify-center items-center mb-8 font-bold text-center md:mb-12 md:text-2xl lg:text-3xl"
       >
-        <span class="mr-2 text-teal-300">01.</span> About Me
+        <span class="mr-2 text-accent">01.</span> About Me
       </h2>
 
       <div class="flex flex-col gap-12 lg:flex-row">

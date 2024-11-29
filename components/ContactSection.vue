@@ -11,7 +11,7 @@ import { Button } from '~/components/ui/button';
       <h2
         class="flex justify-center items-center mb-8 font-bold text-center md:mb-12 md:text-2xl lg:text-3xl"
       >
-        <span class="mr-2 text-teal-300">04.</span> Get In Touch
+        <span class="mr-2 text-accent">04.</span> Get In Touch
       </h2>
 
       <p class="mb-6 text-center">

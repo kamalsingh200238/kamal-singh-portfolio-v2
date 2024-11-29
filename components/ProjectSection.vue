@@ -25,7 +25,7 @@ import { projects } from "~/data/projects.js";
       <h2
         class="flex justify-center items-center mb-8 font-bold text-center md:mb-12 md:text-2xl lg:text-3xl"
       >
-        <span class="mr-2 text-teal-300">03.</span> Projects
+        <span class="mr-2 text-accent">03.</span> Projects
       </h2>
 
       <div class="space-y-12">
@@ -53,11 +53,11 @@ import { projects } from "~/data/projects.js";
             </Carousel>
           </div>
           <div class="w-full lg:w-1/2">
-            <h3 class="mb-2 text-lg font-bold lg:text-xl text-teal-300">
+            <h3 class="mb-2 text-lg font-bold lg:text-xl text-accent">
               {{ project.title }}
             </h3>
             <p class="mb-4">{{ project.description }}</p>
-            <h4 class="mb-2 text-base font-semibold text-teal-300">
+            <h4 class="mb-2 text-base font-semibold text-accent">
               Features:
             </h4>
             <ul class="pl-6 mb-4 space-y-2 list-disc">

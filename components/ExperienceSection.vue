@@ -12,7 +12,7 @@ import { experiences } from "~/data/experiences";
       <h2
         class="flex justify-center items-center mb-8 font-bold text-center md:mb-12 md:text-2xl lg:text-3xl"
       >
-        <span class="mr-2 text-teal-300">02.</span> Work Experience
+        <span class="mr-2 text-accent">02.</span> Work Experience
       </h2>
 
       <Tabs :default-value="experiences[0].company">
@@ -34,10 +34,10 @@ import { experiences } from "~/data/experiences";
             <h3 class="mb-2 text-lg font-bold lg:text-xl">
               {{ exp.position }}
             </h3>
-            <p class="mb-2 text-lg font-semibold md:text-xl text-teal-300">
+            <p class="mb-2 text-lg font-semibold md:text-xl text-accent">
               {{ exp.company }}
             </p>
-            <p class="mb-4 text-sm lg:text-base text-teal-300">
+            <p class="mb-4 text-sm lg:text-base text-accent">
               {{ exp.period }}
             </p>
           </div>
