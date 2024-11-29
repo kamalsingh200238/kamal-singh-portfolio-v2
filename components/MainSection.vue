@@ -11,11 +11,13 @@ import { Button } from "~/components/ui/button";
 
 <template>
   <section
-    class="py-16 px-8 md:py-24 md:px-12 lg:py-32 lg:px-16 text-slate-300 mt-2 lg:mt-2"
+    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-foreground min-h-screen flex items-center justify-center"
   >
-    <div class="flex justify-center items-center">
+    <div>
       <div class="max-w-3xl text-center">
-        <p class="mb-6 text-xs text-teal-300 md:text-sm">Hi, my name is</p>
+        <p class="mb-6 text-xs text-accent md:text-sm font-bold">
+          Hi, my name is
+        </p>
         <h1 class="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
           Kamal Singh
         </h1>
