@@ -7,7 +7,7 @@ import { Button } from '~/components/ui/button';
     id="contact"
     class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300"
   >
-    <div class="mx-auto max-w-5xl">
+    <div class="mx-auto max-w-xl">
       <h2
         class="flex justify-center items-center mb-8 font-bold text-center md:mb-12 md:text-2xl lg:text-3xl"
       >
