@@ -57,9 +57,7 @@ import { projects } from "~/data/projects.js";
               {{ project.title }}
             </h3>
             <p class="mb-4">{{ project.description }}</p>
-            <h4 class="mb-2 text-base font-semibold text-accent">
-              Features:
-            </h4>
+            <h4 class="mb-2 text-base font-semibold text-accent">Features:</h4>
             <ul class="pl-6 mb-4 space-y-2 list-disc">
               <li
                 v-for="(feature, featureIndex) in project.features"
@@ -78,7 +76,7 @@ import { projects } from "~/data/projects.js";
               </span>
             </div>
             <div class="flex gap-2 items-center">
-              <TooltipProvider>
+              <TooltipProvider :delay-duration="100">
                 <Tooltip>
                   <TooltipTrigger as-child>
                     <Button
@@ -100,22 +98,24 @@ import { projects } from "~/data/projects.js";
                 </Tooltip>
               </TooltipProvider>
 
-              <TooltipProvider>
+              <TooltipProvider :delay-duration="100">
                 <Tooltip>
                   <TooltipTrigger as-child>
-                    <Button
-                      :as="project.hasLiveLink ? 'a' : 'button'"
-                      variant="icon"
-                      size="icon"
-                      :disabled="!project.hasLiveLink"
-                      :href="project.liveLink"
-                      target="_blank"
-                    >
-                      <font-awesome-icon
-                        class="text-lg"
-                        icon="fa-solid fa-arrow-up-right-from-square"
-                      />
-                    </Button>
+                    <span tabindex="1">
+                      <Button
+                        :as="project.hasLiveLink ? 'a' : 'button'"
+                        variant="icon"
+                        size="icon"
+                        :disabled="!project.hasLiveLink"
+                        :href="project.liveLink"
+                        target="_blank"
+                      >
+                        <font-awesome-icon
+                          class="text-lg"
+                          icon="fa-solid fa-arrow-up-right-from-square"
+                        />
+                      </Button>
+                    </span>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p v-if="project.hasLiveLink">
