@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from '~/components/ui/button';
+import { Button } from "~/components/ui/button";
 </script>
 
 <template>
@@ -20,10 +20,7 @@ import { Button } from '~/components/ui/button';
       </p>
 
       <div class="text-center">
-        <Button
-          as="a"
-          href="mailto:kamalsingh200239@gmail.com"
-        >
+        <Button as="a" href="mailto:kamalsingh200239@gmail.com">
           Say Hello
         </Button>
       </div>

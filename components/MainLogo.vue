@@ -1,9 +1,5 @@
 <template>
-  <svg
-    viewBox="0 0 42 42"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="main logo">
       <path
         id="Polygon 1"

@@ -1,24 +1,28 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { TabsList, type TabsListProps } from 'radix-vue'
-import { cn } from '~/lib/utils/cn'
+import { type HTMLAttributes, computed } from "vue";
+import { TabsList, type TabsListProps } from "radix-vue";
+import { cn } from "~/lib/utils/cn";
 
-const props = defineProps<TabsListProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  TabsListProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
   <TabsList
     v-bind="delegatedProps"
-    :class="cn(
-      'inline-flex items-center justify-center rounded-md bg-accent p-1 text-accent-foreground',
-      props.class,
-    )"
+    :class="
+      cn(
+        'inline-flex items-center justify-center rounded-md bg-accent p-1 text-accent-foreground',
+        props.class,
+      )
+    "
   >
     <slot />
   </TabsList>
