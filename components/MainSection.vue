@@ -7,6 +7,11 @@ import {
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { Button } from "~/components/ui/button";
+
+const pageLoaded = ref(false);
+onMounted(() => {
+  pageLoaded.value = true;
+});
 </script>
 
 <template>
@@ -15,35 +20,65 @@ import { Button } from "~/components/ui/button";
   >
     <div>
       <div class="max-w-3xl text-center">
-        <p class="mb-6 text-xs text-accent md:text-sm font-bold">
+        <p
+          class="mb-6 text-xs text-accent md:text-sm font-bold line-animation"
+          :class="{ 'opacity-0': !pageLoaded }"
+        >
           Hi, my name is
         </p>
-        <h1 class="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-          Kamal Singh
+        <h1
+          class="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl"
+          :class="{ 'opacity-0': !pageLoaded }"
+        >
+          <span class="sr-only">Kamal Singh</span>
+          <span class="word-animation" aria-hidden="true">Kamal Singh</span>
         </h1>
 
-        <p
+        <h2
           class="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl text-slate-400"
+          :class="{ 'opacity-0': !pageLoaded }"
         >
-          I build things for the web
-        </p>
+          <span class="sr-only">I build things for the web</span>
+          <span class="word-animation" aria-hidden="true">
+            I build things for the web
+          </span>
+        </h2>
 
-        <p class="mx-auto mb-12 max-w-xl">
-          I'm a software engineer specializing in building beautiful, accessible
-          websites that create seamless online experiences. I focus on clean
-          design and usability, ensuring that every site I build works well for
-          all users, on any device. Let's collaborate to bring your ideas to
-          life!
+        <p
+          class="mx-auto mb-12 max-w-xl line-animation"
+          :class="{ 'opacity-0': !pageLoaded }"
+        >
+          <span class="sr-only">
+            I'm a software engineer specializing in building beautiful,
+            accessible websites that create seamless online experiences. I focus
+            on clean design and usability, ensuring that every site I build
+            works well for all users, on any device. Let's collaborate to bring
+            your ideas to life!
+          </span>
+          <span class="line-animation" aria-hidden="true">
+            I'm a software engineer specializing in building beautiful,
+            accessible websites that create seamless online experiences. I focus
+            on clean design and usability, ensuring that every site I build
+            works well for all users, on any device. Let's collaborate to bring
+            your ideas to life!
+          </span>
         </p>
 
         <nav
           class="flex flex-col gap-6 justify-center mb-12 md:flex-row md:gap-8"
         >
-          <Button as="a" variant="outline" href="#about">Learn More</Button>
+          <Button
+            as="a"
+            variant="outline"
+            href="#about"
+            class="stagger-animation opacity-0"
+            >Learn More</Button
+          >
           <Button
             as="a"
             href="/kamal-resume.pdf"
             download="kamal-singh-resume.pdf"
+            class="stagger-animation opacity-0"
             >Resume</Button
           >
         </nav>
@@ -55,6 +90,7 @@ import { Button } from "~/components/ui/button";
               variant="icon"
               size="icon"
               href="https://github.com/kamalsingh200238"
+              class="stagger-animation opacity-0"
             >
               <FontAwesomeIcon :icon="faGithub" size="2xl" />
             </Button>
@@ -65,6 +101,7 @@ import { Button } from "~/components/ui/button";
               variant="icon"
               size="icon"
               href="https://twitter.com/Kamalsingh1605"
+              class="stagger-animation opacity-0"
             >
               <FontAwesomeIcon :icon="faXTwitter" size="2xl" />
             </Button>
@@ -75,6 +112,7 @@ import { Button } from "~/components/ui/button";
               variant="icon"
               size="icon"
               href="mailto:kamalsingh200238@gmail.com"
+              class="stagger-animation opacity-0"
             >
               <FontAwesomeIcon :icon="faEnvelope" size="2xl" />
             </Button>
@@ -85,6 +123,7 @@ import { Button } from "~/components/ui/button";
               variant="icon"
               size="icon"
               href="https://www.linkedin.com/in/kamal--singh/"
+              class="stagger-animation opacity-0"
             >
               <FontAwesomeIcon :icon="faLinkedin" size="2xl" />
             </Button>

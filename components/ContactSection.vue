@@ -5,7 +5,7 @@ import { Button } from "~/components/ui/button";
 <template>
   <section
     id="contact"
-    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300"
+    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300 section-fade-animation opacity-0"
   >
     <div class="mx-auto max-w-xl">
       <h2

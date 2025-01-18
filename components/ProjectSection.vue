@@ -19,7 +19,7 @@ import { projects } from "~/data/projects.js";
 <template>
   <section
     id="projects"
-    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300 scroll-m-16"
+    class="py-10 px-8 md:py-12 md:px-12 lg:py-16 lg:px-16 text-slate-300 scroll-m-16 section-fade-animation opacity-0"
   >
     <div class="mx-auto max-w-7xl">
       <h2
